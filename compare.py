@@ -1,7 +1,6 @@
 import json
 from datetime import date
-from datetime import timedelta
-from deepdiff import DeepDiff
+
 import re
 import os
 from getPlaylists import getPlayLists
@@ -21,11 +20,20 @@ def create_compareList():
                     compareList.get(playlist).append(content)
 
 
+def check_equal(lst1, lst2):
+    return all(any(d1 == d2 for d2 in lst2) for d1 in lst1) and all(any(d1 == d2 for d2 in lst1) for d1 in lst2)
+
+
 def compare(playlist):
     if len(compareList.get(playlist)) > 1:
         [yesterday, today] = compareList.get(playlist)
-        result = DeepDiff(yesterday, today)
-        return result
+        if check_equal(yesterday, today) == True:
+            return {}
+        else:
+            unique_to_yesterday = [item["title"] for item in yesterday if item not in today]
+            unique_to_today = [item["title"] for item in today if item not in yesterday]
+            result = {"deleted video": unique_to_yesterday, "added video": unique_to_today}
+            return result
     else:
         return "new playlist :O"
 
@@ -42,7 +50,6 @@ def delete_old_backup():
 
 
 def handle_compare(playlist):
-
     create_compareList()
 
     result = compare(playlist)
@@ -51,5 +58,3 @@ def handle_compare(playlist):
         return "Nothing has been changed ;D"
     else:
         return result
-
-#delete_old_backup()

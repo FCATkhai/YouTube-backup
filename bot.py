@@ -26,7 +26,12 @@ if __name__ == '__main__':
     playlists = getPlayLists()
     for playlist in playlists:
         result = handle_compare(playlist)
-        result = json.dumps(result, ensure_ascii=False)
-        send_message(f"""<b>--{playlist}--</b>\n{result}""")
+        result = json.dumps(result, ensure_ascii=False, indent=4)
+        if len(result) > 4096:
+            send_message(f"<b>--{playlist}--</b>")
+            for x in range(0, len(result), 4096):
+                send_message(result[x:x + 4096])
+        else:
+            send_message(f"""<b>--{playlist}--</b>\n{result}""")
     delete_old_backup()
 
