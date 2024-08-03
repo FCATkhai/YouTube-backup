@@ -1,7 +1,7 @@
 """ Pull All Youtube Videos from a Playlist """
 import os
 import json
-from datetime import date
+from time import gmtime, strftime
 from datetime import timedelta
 from apiclient.discovery import build
 from dotenv import load_dotenv
@@ -67,24 +67,9 @@ def create_backup():
         for i in range(len(list_of_videos)):
             list_of_videos[i] = list_of_videos[i]['snippet']
 
-        today = date.today()
-        with open(f".\\Backup\\{playlist_title}_{today}.json", "w", encoding="utf-8") as outfile:
+        current_time = strftime("%Y-%m-%d_%H-%M-%S_GMT", gmtime())
+        with open(f".\\Backup\\{playlist_title}_{current_time}.json", "w", encoding="utf-8") as outfile:
             json.dump(list_of_videos, outfile, ensure_ascii=False, indent=4)
 
-def create_test():
-    playlists = getPlayLists()
 
-    for playlist_title, URL in playlists.items():
-        videos = fetch_all_youtube_videos(URL)
-        list_of_videos = videos.get("items")
-
-        for i in range(len(list_of_videos)):
-            list_of_videos[i] = list_of_videos[i]['snippet']
-
-        today = date.today()
-        yesterday = today - timedelta(days=1)
-        with open(f".\\Backup\\{playlist_title}_{yesterday}.json", "w", encoding="utf-8") as outfile:
-            json.dump(list_of_videos, outfile, ensure_ascii=False, indent=4)
-
-# create_test()
 #create_backup()

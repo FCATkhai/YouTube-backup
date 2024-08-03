@@ -26,13 +26,13 @@ def check_equal(lst1, lst2):
 
 def compare(playlist):
     if len(compareList.get(playlist)) > 1:
-        [yesterday, today] = compareList.get(playlist)
-        if check_equal(yesterday, today) == True:
+        [previous, current] = compareList.get(playlist)
+        if check_equal(previous, current) == True:
             return {}
         else:
-            unique_to_yesterday = [item["title"] for item in yesterday if item not in today]
-            unique_to_today = [item["title"] for item in today if item not in yesterday]
-            result = {"deleted video": unique_to_yesterday, "added video": unique_to_today}
+            unique_to_previous = [item["title"] for item in previous if item not in current]
+            unique_to_current = [item["title"] for item in current if item not in previous]
+            result = {"deleted video": unique_to_previous, "added video": unique_to_current}
             return result
     else:
         return "new playlist :O"
@@ -55,6 +55,6 @@ def handle_compare(playlist):
     result = compare(playlist)
     if not bool(result):
         # empty result
-        return "Nothing has been changed ;D"
+        return "Nothing has been changed from previous backup ;D"
     else:
         return result
