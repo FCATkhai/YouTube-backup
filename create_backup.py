@@ -61,6 +61,7 @@ def create_backup():
     playlists = getPlayLists()
 
     for playlist_title, URL in playlists.items():
+        playlist_title =  playlist_title.replace("_", "-")  # replace all "_" with "-"
         videos = fetch_all_youtube_videos(URL)
         list_of_videos = videos.get("items")
 

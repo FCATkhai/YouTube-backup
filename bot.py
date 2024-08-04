@@ -5,7 +5,7 @@ import telebot
 from dotenv import load_dotenv
 from create_backup import create_backup
 from getPlaylists import getPlayLists
-from compare import handle_compare, delete_old_backup
+from compare import handle_compare, delete_all_old_backups
 
 # loading variables from .env file
 load_dotenv()
@@ -33,5 +33,6 @@ if __name__ == '__main__':
                 send_message(result[x:x + 4096])
         else:
             send_message(f"""<b>--{playlist}--</b>\n{result}""")
-    delete_old_backup()
+        if result != "new playlist :O":
+            delete_all_old_backups(playlist)
 
