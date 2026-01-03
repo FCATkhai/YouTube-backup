@@ -1,0 +1,236 @@
+{
+    "kind": "youtube#playlistItemListResponse",
+    "etag": "VmIzlKOHkGSC-1-B1_w-sbX2QHI",
+    "nextPageToken": "EAAaHlBUOkNBVWlFRU5CUTBSRU5EWTJRak5GUkRFMU5qVQ",
+    "items": [
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "YoJ00PE_NzROQWmeYf2m81-GU1E",
+            "id": "UEw5eVlHZmtwMVg3ZE5sX0xGb0tRTWFJUlBFSEJPN2xZbS41NkI0NEY2RDEwNTU3Q0M2",
+            "snippet": {
+                "publishedAt": "2025-08-22T16:43:36Z",
+                "channelId": "UC1Nan4np1SG3uI3gt0HjdnA",
+                "title": "【東方Vocal】 Fiction Jealousism 【Touhou Cannonball】 (English Subtitles)",
+                "description": "🎸 Title: フィクション・ジェラシズム (Fiction Jealousism)\n🎸 Theme: 緑眼のジェラシー (Green-Eyed Jealousy)\n🎸 Original Work: 東方地霊殿　～　Subterranean Animism (touhou 11)\n🎸 Circle: 少女理論観測所 (Girl’s Logic Observatory)\n🎸 Vocals: 咲子 (Sakiko)\n🎸 Arrange: テラ (TERRA)\n🎸 Lyric: テラ (TERRA)\n🎸 Character: 水橋 パルスィ (Mizuhashi Parsee)\n🎸 Illustration: Touhou cannonball\n🎸 Translation: Releska\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nParuparu chan was so pretty, and when I gave every of my gems to her, she didn't reply.\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n↓ Disclaimer! ↓\nこの動画で使われている音楽と背景の著作権の所有者ではありません。\nこの動画は収益化されていません。あなたは歌またはイラストレーションの所有者をしているし、ここから削除したい場合は私に連絡してください！私は即座にビデオを削除します。ありがとうございます！",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/twVnq6nvliw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/twVnq6nvliw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/twVnq6nvliw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Dismas",
+                "playlistId": "PL9yYGfkp1X7dNl_LFoKQMaIRPEHBO7lYm",
+                "position": 0,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "twVnq6nvliw"
+                },
+                "videoOwnerChannelTitle": "2hu muzik with pic",
+                "videoOwnerChannelId": "UCJaWejIAx9Cn5weG7b6Jshg"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "nM5hdX68b06m_Te9Q7nYJWWK3uY",
+            "id": "UEw5eVlHZmtwMVg3ZE5sX0xGb0tRTWFJUlBFSEJPN2xZbS4wMTcyMDhGQUE4NTIzM0Y5",
+            "snippet": {
+                "publishedAt": "2025-08-22T16:44:22Z",
+                "channelId": "UC1Nan4np1SG3uI3gt0HjdnA",
+                "title": "踊 (Bon-Odo Remix)／天音かなた(cover)",
+                "description": "半端ならK.O.✊💙\n\n無料 3DLIVE 「リベンジ」\nhttps://youtu.be/Dji-ehIz5_k\n\n本家様：\n【Ado】踊 (Bon-Odo Remix)\nhttps://www.youtube.com/watch?v=Cw_tD7MXeEI\n【Ado】踊\nhttps://www.youtube.com/watch?v=YnSW8ian29w\n\n\n歌：天音かなた\nhttps://twitter.com/amanekanatach\n\nイラスト：おしるこ\nhttps://twitter.com/oshiruco_212048\n\n動画：もえこ\nhttps://twitter.com/mmmmoeko_\n\nMIX：友達募集P\nhttps://twitter.com/tomobop\n\n\n※歌ってみた動画です",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/TJSur7yNKTc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/TJSur7yNKTc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/TJSur7yNKTc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/TJSur7yNKTc/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/TJSur7yNKTc/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Dismas",
+                "playlistId": "PL9yYGfkp1X7dNl_LFoKQMaIRPEHBO7lYm",
+                "position": 1,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "TJSur7yNKTc"
+                },
+                "videoOwnerChannelTitle": "Kanata Ch. 天音かなた",
+                "videoOwnerChannelId": "UCZlDXzGoo7d44bwdNObFacg"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "5qVBL9x03BP0SBa6G8oaspPh9os",
+            "id": "UEw5eVlHZmtwMVg3ZE5sX0xGb0tRTWFJUlBFSEJPN2xZbS41MjE1MkI0OTQ2QzJGNzNG",
+            "snippet": {
+                "publishedAt": "2025-08-22T16:44:37Z",
+                "channelId": "UC1Nan4np1SG3uI3gt0HjdnA",
+                "title": "【Lyric Video】結束バンド「ギターと孤独と蒼い惑星」／ TVアニメ「ぼっち・ざ・ろっく！」第5話劇中曲",
+                "description": "ギターと孤独と蒼い惑星\n作詞：ZAQ\n作曲：音羽-otoha-\n編曲：akkin\n\nイラスト：けろりら \n背景：守安靖尚\n映像：まるいち\nリリックデザイン：アジャラカ\n\n・配信URL\nhttps://anxmusic.lnk.to/4IT2wI\n\n・結束バンドプレイリスト\nhttps://anxmusic.lnk.to/LReTY7　 \n\n『結束バンド』 / 結束バンド\n品番：SVWC-70613\n発売日：12月28日(水) \n価格：4,070円（税抜価格3,700円）\n仕様：CD1枚 BD1枚 期間生産限定盤\n収録曲：全14曲（「青春コンプレックス」「Distortion‼」「カラカラ」 ほか）\n◆12月25日(日) アルバム「結束バンド」全収録楽曲 先行配信実施！\n\n\n「ぼっち・ざ・ろっく！」10月8日より各局にて放送開始！\n　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n◆TOKYO MX、BS11、群馬テレビ、とちぎテレビ\n10月8日より　毎週土曜日24時00分～\n◆MRT宮崎放送\n10月8日より　毎週土曜日25時28分～\n◆MBS\n10月8日より　毎週土曜日27時08分～\n◆RKB毎日放送\n10月13日より　毎週木曜日27時00分～\n◆AT-X\n10月10日より　毎週月曜日22時30分～\n\n【配信情報】\n◆ABEMA　　10月8日より　毎週土曜日24時00分～　※地上波同時配信\n\n◆各配信プラットフォーム\nNetflix/dアニメストア/U-NEXT/アニメ放題/Amazon Prime Video/バンダイチャンネル/Hulu/ニコニコ生放送/GYAO!/ FOD/ひかりTV / TELASA/J:COMオンデマンド/みるプラス/ auスマートパスプレミアム/ WOWOWオンデマンド 他\n\n10月11日より　毎週火曜日12時00分～ 順次配信\n\n\n🎸あらすじ　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n「ぼっちちゃん」こと後藤ひとりは、ギターを愛する孤独な少女。\n 家で一人寂しく弾くだけの毎日だったが、ひょんなことから\n 伊地知虹夏が率いる「結束バンド」に加入することに。\n 人前での演奏に不慣れな後藤は、立派なバンドマンになれるのか――\n\n\n🥁スタッフ　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n原作：はまじあき\n (芳文社「まんがタイムきららMAX」連載中) \n監督：斎藤圭一郎\nシリーズ構成・脚本：吉田恵里香\nキャラクターデザイン・総作画監督：けろりら\n副監督：山本ゆうすけ\nライブディレクター：川上雄介 \nライブアニメーター：伊藤優希 \nプロップデザイン：永木歩実 \n2Dワークス：梅木葵\n色彩設計：横田明日香 \n美術監督：守安靖尚 \n美術設定：taracod \n撮影監督：金森つばさ \nCGディレクター：宮地克明 \nライブCGディレクター：内田博明 \n編集：平木大輔\n音楽：菊谷知樹\n音響監督：藤田亜紀子\n音響効果：八十正太 \n制作：CloverWorks\n\n🎙キャスト\n後藤ひとり　青山吉能\n伊地知虹夏　鈴代紗弓\n山田リョウ　水野朔\n喜多郁代　　長谷川育美\n\n\n🄭TVアニメ「ぼっち・ざ・ろっく！」OPシングル\n『青春コンプレックス』10月12日(水)　発売\n\n　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　\n公式サイト：bocchi.rocks　\n公式Twitter：@BTR_anime\n公式Instagram：@BTR_isosta\n\n#ぼっちざろっく \n#結束バンド",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/B7BxrAAXl94/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/B7BxrAAXl94/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/B7BxrAAXl94/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/B7BxrAAXl94/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/B7BxrAAXl94/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Dismas",
+                "playlistId": "PL9yYGfkp1X7dNl_LFoKQMaIRPEHBO7lYm",
+                "position": 2,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "B7BxrAAXl94"
+                },
+                "videoOwnerChannelTitle": "アニプレックス チャンネル",
+                "videoOwnerChannelId": "UC14QT5j2nQI8lKBCGtrrBQA"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "u3mmPRQ6mCyCm2AHULP0jswpea4",
+            "id": "UEw5eVlHZmtwMVg3ZE5sX0xGb0tRTWFJUlBFSEJPN2xZbS4yODlGNEE0NkRGMEEzMEQy",
+            "snippet": {
+                "publishedAt": "2025-08-22T16:43:58Z",
+                "channelId": "UC1Nan4np1SG3uI3gt0HjdnA",
+                "title": "【VietSub/EngSub】  Last be Love ~ Satomi & Youko(佐藤聡美・日笠陽子) 『L@ve once -mermaid’s tears- ED』",
+                "description": "♪ I hope enjoy! \n♪ Ending (PS3): Last be Love\n♪ Visual Novel: L@ve once -mermaid’s tears- (all age)\n♪ Info (VN): https://vndb.org/v5218\n\n\n※ Visual Novel & Song Information: \n\nLast be Love\n歌：L@ve ガールズ（佐藤聡美・日笠陽子）// Satou Satomi & Hikasa Youko\n作詞：ma-saya、\n作曲：下田義浩、// Shimoda Yoshihiro\n編曲：森藤晶司 // Morifuji Syoji\nPS3専用ゲームソフト｢L@ve once-mermaid's tears-｣エンディングテーマ\n\n\n※ Translation\n• EngSub: xakira_kunx\n• VietSub: Yuki-Onna",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/1Zq-lHZN70Y/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/1Zq-lHZN70Y/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/1Zq-lHZN70Y/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/1Zq-lHZN70Y/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/1Zq-lHZN70Y/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Dismas",
+                "playlistId": "PL9yYGfkp1X7dNl_LFoKQMaIRPEHBO7lYm",
+                "position": 3,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "1Zq-lHZN70Y"
+                },
+                "videoOwnerChannelTitle": "Yuki Onna",
+                "videoOwnerChannelId": "UCQPY5WkOIgLHw6vY8Cc5ULA"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "gIUlIQQcskiXkBSys3lHY_fFoKI",
+            "id": "UEw5eVlHZmtwMVg3ZE5sX0xGb0tRTWFJUlBFSEJPN2xZbS4xMkVGQjNCMUM1N0RFNEUx",
+            "snippet": {
+                "publishedAt": "2025-08-22T16:45:07Z",
+                "channelId": "UC1Nan4np1SG3uI3gt0HjdnA",
+                "title": "Seasons of Warfare - Lady of Hresvelg (The Edge of Dawn) Full Ver.",
+                "description": "The reupload of the reupload of the full version of The Edge of Dawn (Seasons of Warfare), now available in English!\nThis is the version that plays in the intro cutscene. This is not the version that plays in the end credits.\n\nComposer: Takeru Kanazaki\nVocalist: Buttercup\nI own nothing, everything in this video belongs to Nintendo and Intelligent Systems.\n\nHere's the purchase link to The Edge of Dawn (Seasons of Warfare) on iTunes. Please buy this so Nintendo can release more soundtracks on western storefronts!\nhttps://music.apple.com/us/album/the-edge-of-dawn-seasons-of-warfare-single/1488436985",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/FSXuM2v0YLY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/FSXuM2v0YLY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/FSXuM2v0YLY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/FSXuM2v0YLY/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/FSXuM2v0YLY/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Dismas",
+                "playlistId": "PL9yYGfkp1X7dNl_LFoKQMaIRPEHBO7lYm",
+                "position": 4,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "FSXuM2v0YLY"
+                },
+                "videoOwnerChannelTitle": "twiilit_",
+                "videoOwnerChannelId": "UCPu9t1UKlChttR6omrROy3g"
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 8,
+        "resultsPerPage": 5
+    }
+}

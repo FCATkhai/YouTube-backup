@@ -11,10 +11,15 @@ from compare import handle_compare, delete_all_old_backups
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_API_KEY")
+if not BOT_TOKEN:
+    raise ValueError("No BOT_API_KEY found in environment variables.")
+
+chat_id = os.getenv("CHAT_ID")
+if not chat_id:
+    raise ValueError("No CHAT_ID found in environment variables.")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
-chat_id = os.getenv("CHAT_ID")
 
 
 def send_message(text, chat_id=chat_id):

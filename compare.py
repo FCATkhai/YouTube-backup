@@ -58,12 +58,8 @@ def delete_all_old_backups(playlist: str):
         for filename in os.listdir('./Backup'):
             if playlist == filename[:len(playlist)]:
                 if latest not in filename:
-                    source_path = f"./Backup/{filename}"
-                    oldBackup_path = f"./OldBackup/{playlist}"
-                    if os.path.exists(source_path):
-                        if not os.path.exists(oldBackup_path):
-                            os.mkdir(oldBackup_path)
-                        os.replace(source_path, os.path.join(oldBackup_path, filename))
+                    # remove file not the latest
+                    os.remove(f'./Backup/{filename}')
 
 
 def handle_compare(playlist):

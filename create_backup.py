@@ -31,11 +31,14 @@ def fetch_all_youtube_videos(playlistId):
     youtube = build(YOUTUBE_API_SERVICE_NAME,
                     YOUTUBE_API_VERSION,
                     developerKey=YOUTUBE_API_KEY)
+    
+    retrieve_fields = "nextPageToken,items/snippet/title,items/snippet/publishedAt, items/snippet/thumbnails/standard, items/snippet/resourceId/videoId"
+    
     res = youtube.playlistItems().list(
         part="snippet",
         playlistId=playlistId,
         maxResults="50",
-        fields="nextPageToken,items/snippet/title,items/snippet/publishedAt"
+        fields=retrieve_fields
     ).execute()
 
     nextPageToken = res.get('nextPageToken')
@@ -45,7 +48,7 @@ def fetch_all_youtube_videos(playlistId):
             playlistId=playlistId,
             maxResults="50",
             pageToken=nextPageToken,
-            fields="nextPageToken,items/snippet/title,items/snippet/publishedAt"
+            fields=retrieve_fields
         ).execute()
         res['items'] = res['items'] + nextPage['items']
 
