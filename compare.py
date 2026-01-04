@@ -2,6 +2,7 @@ import json
 import re
 import os
 from datetime import datetime
+from send2trash import send2trash
 from getPlaylists import getPlayLists
 
 playlists = getPlayLists()
@@ -16,7 +17,7 @@ def create_compareList():
             if pattern.match(filename):
                 with open(f"./Backup/{filename}", mode="r", encoding="utf-8") as file:
                     content = json.load(file)
-                    compareList.get(playlist).append(content)
+                    compareList[playlist].append(content)
 
 
 def check_equal(lst1, lst2):
@@ -24,8 +25,8 @@ def check_equal(lst1, lst2):
 
 
 def compare(playlist):
-    if len(compareList.get(playlist)) > 1:
-        [previous, current] = compareList.get(playlist)
+    if len(compareList[playlist]) > 1:
+        [previous, current] = compareList[playlist]
         if check_equal(previous, current) == True:
             return {}
         else:
@@ -59,7 +60,7 @@ def delete_all_old_backups(playlist: str):
             if playlist == filename[:len(playlist)]:
                 if latest not in filename:
                     # remove file not the latest
-                    os.remove(f'./Backup/{filename}')
+                    send2trash(f'./Backup/{filename}')
 
 
 def handle_compare(playlist):
