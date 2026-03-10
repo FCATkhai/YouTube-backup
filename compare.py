@@ -12,7 +12,7 @@ compareList = {}
 def create_compareList():
     for playlist in playlists:
         compareList[playlist] = []
-        pattern = re.compile(f'{playlist}.*\.json')
+        pattern = re.compile(fr'^{re.escape(playlist)}_.*\.json$')
         for filename in os.listdir('./Backup'):
             if pattern.match(filename):
                 with open(f"./Backup/{filename}", mode="r", encoding="utf-8") as file:
