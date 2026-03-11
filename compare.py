@@ -43,24 +43,44 @@ def filename_to_datetime(filename: str):
     filename = filename[underscore + 1:-5]
     return datetime.strptime(filename, "%Y-%m-%d_%H-%M-%S_GMT")
 
-
 def delete_all_old_backups(playlist: str):
-    latest = datetime(1990, 1, 1)
-    # find latest file
-    for filename in os.listdir('./Backup'):
-        if playlist == filename[:len(playlist)]:
-            current = filename_to_datetime(filename)
-            if latest < current:
-                latest = current
+    pattern = re.compile(fr'^{re.escape(playlist)}_.*\.json$')
 
-    # delete
-    if latest != datetime(1990, 1, 1):
-        latest = latest.strftime("%Y-%m-%d_%H-%M-%S_GMT")  # convert back to str
-        for filename in os.listdir('./Backup'):
-            if playlist == filename[:len(playlist)]:
-                if latest not in filename:
-                    # remove file not the latest
-                    send2trash(f'./Backup/{filename}')
+    files = []
+    for filename in os.listdir('./Backup'):
+        if pattern.match(filename):
+            dt = filename_to_datetime(filename)
+            files.append((filename, dt))
+
+    if not files:
+        return
+
+    latest_file, _ = max(files, key=lambda x: x[1])
+
+    for filename, _ in files:
+        if filename != latest_file:
+            send2trash(os.path.join('./Backup', filename))
+
+
+# def delete_all_old_backups(playlist: str):
+#     latest = datetime(1990, 1, 1)
+#     # find latest file
+#     for filename in os.listdir('./Backup'):
+#         pattern = re.compile(fr'^{re.escape(playlist)}_.*\.json$')
+#         if pattern.match(filename):
+#             current = filename_to_datetime(filename)
+#             if latest < current:
+#                 latest = current
+
+#     # delete
+#     if latest != datetime(1990, 1, 1):
+#         latest = latest.strftime("%Y-%m-%d_%H-%M-%S_GMT")  # convert back to str
+#         for filename in os.listdir('./Backup'):
+#             pattern = re.compile(fr'^{re.escape(playlist)}_.*\.json$')
+#             if pattern.match(filename):
+#                 if latest not in filename:
+#                     # remove file not the latest
+#                     send2trash(f'./Backup/{filename}')
 
 
 def handle_compare(playlist):
