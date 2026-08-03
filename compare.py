@@ -62,35 +62,10 @@ def delete_all_old_backups(playlist: str):
             send2trash(os.path.join('./Backup', filename))
 
 
-# def delete_all_old_backups(playlist: str):
-#     latest = datetime(1990, 1, 1)
-#     # find latest file
-#     for filename in os.listdir('./Backup'):
-#         pattern = re.compile(fr'^{re.escape(playlist)}_.*\.json$')
-#         if pattern.match(filename):
-#             current = filename_to_datetime(filename)
-#             if latest < current:
-#                 latest = current
-
-#     # delete
-#     if latest != datetime(1990, 1, 1):
-#         latest = latest.strftime("%Y-%m-%d_%H-%M-%S_GMT")  # convert back to str
-#         for filename in os.listdir('./Backup'):
-#             pattern = re.compile(fr'^{re.escape(playlist)}_.*\.json$')
-#             if pattern.match(filename):
-#                 if latest not in filename:
-#                     # remove file not the latest
-#                     send2trash(f'./Backup/{filename}')
-
-
 def handle_compare(playlist):
     create_compareList()
 
     result = compare(playlist)
-    if not bool(result):
-        # empty result
-        return "Nothing has been changed from previous backup ;D"
-    else:
-        return result
+    return result
 
 #delete_all_old_backups("Cover")

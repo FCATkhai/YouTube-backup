@@ -42,7 +42,7 @@ def fetch_all_youtube_videos(playlistId):
     ).execute()
 
     nextPageToken = res.get('nextPageToken')
-    while 'nextPageToken' in res:
+    while nextPageToken:
         nextPage = youtube.playlistItems().list(
             part="snippet",
             playlistId=playlistId,
@@ -50,13 +50,20 @@ def fetch_all_youtube_videos(playlistId):
             pageToken=nextPageToken,
             fields=retrieve_fields
         ).execute()
-        res['items'] = res['items'] + nextPage['items']
+        
+        items = nextPage.get('items', [])
+        if not items:
+            break
+            
+        res['items'] = res['items'] + items
+        
+        new_token = nextPage.get('nextPageToken')
+        # Break if no new token or if the token is identical to the current one to prevent infinite loop
+        if not new_token or new_token == nextPageToken:
+            break
+        nextPageToken = new_token
 
-        if 'nextPageToken' not in nextPage:
-            res.pop('nextPageToken', None)
-        else:
-            nextPageToken = nextPage['nextPageToken']
-
+    res.pop('nextPageToken', None)
     return res
 
 

@@ -1,3 +1,4 @@
+import html
 import json
 import os
 import telebot
@@ -29,15 +30,60 @@ def send_message(text, chat_id=chat_id):
 if __name__ == '__main__':
     create_backup()
     playlists = getPlayLists()
+    unchanged_playlists = []
+
     for playlist in playlists:
         result = handle_compare(playlist)
-        result = json.dumps(result, ensure_ascii=False, indent=4)
-        if len(result) > 4096:
-            send_message(f"<b>--{playlist}--</b>")
-            for x in range(0, len(result), 4096):
-                send_message(result[x:x + 4096])
-        else:
-            send_message(f"""<b>--{playlist}--</b>\n{result}""")
-        if result != "new playlist :O":
+
+        if result == "new playlist :O":
+            msg = f"<b>🎵 Playlist: {html.escape(playlist)}</b>\n🆕 <i>New playlist initialized!</i>"
+            send_message(msg)
+        elif result == {}:
+            unchanged_playlists.append(playlist)
             delete_all_old_backups(playlist)
+        elif isinstance(result, dict):
+            added_videos = result.get("added video", [])
+            deleted_videos = result.get("deleted video", [])
+
+            # Only format/send if there's at least one added or deleted video
+            if added_videos or deleted_videos:
+                lines = [f"<b>🎵 Playlist: {html.escape(playlist)}</b>"]
+                if added_videos:
+                    lines.append("➕ <b>Added videos:</b>")
+                    for video in added_videos:
+                        lines.append(f"• {html.escape(video)}")
+                if deleted_videos:
+                    if added_videos:
+                        lines.append("")
+                    lines.append("➖ <b>Deleted videos:</b>")
+                    for video in deleted_videos:
+                        lines.append(f"• {html.escape(video)}")
+
+                msg = "\n".join(lines)
+                if len(msg) > 4096:
+                    send_message(lines[0])
+                    current_chunk = []
+                    for line in lines[1:]:
+                        if len("\n".join(current_chunk + [line])) > 4096:
+                            send_message("\n".join(current_chunk))
+                            current_chunk = [line]
+                        else:
+                            current_chunk.append(line)
+                    if current_chunk:
+                        send_message("\n".join(current_chunk))
+                else:
+                    send_message(msg)
+            
+            delete_all_old_backups(playlist)
+
+    if unchanged_playlists:
+        lines = ["✅ <b>No changes detected in the following playlists:</b>"]
+        for p in unchanged_playlists:
+            lines.append(f"• {html.escape(p)}")
+        msg = "\n".join(lines)
+        if len(msg) > 4096:
+            for x in range(0, len(msg), 4096):
+                send_message(msg[x:x + 4096])
+        else:
+            send_message(msg)
 
